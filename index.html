@@ -5,6 +5,13 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="./assets/css/index.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Smythe&family=Staatliches&display=swap"
+      rel="stylesheet"
+    />
+
     <script src="./js/main.js" defer></script>
     <title>Portfolio-template</title>
   </head>
@@ -25,21 +32,23 @@
       </div>
     </nav>
 
+    <button class="hamburger" id="hamburger-menu">
+    ☰
+  </button>
+
     <main id="main">
       <!-- Hero Section -->
       <section id="hero" class="hero">
-        <div class="hero-bg parallax-bg"></div>
         <div class="hero-content">
-          <h1 class="hero-title animate-on-scroll">Jane Developer</h1>
-          <p class="hero-subtitle animate-on-scroll">
-            Front-End Engineer & UI Designer
-          </p>
-          <a href="#projects" class="btn animate-on-scroll">View My Work</a>
+          <h1 class="hero-title animate-on-scroll">Your Name</h1>
+          <a href="#projects" class="btn animate-on-scroll">View my work</a>
         </div>
         <div class="scroll-indicator">
           <span>Scroll</span>
           <div class="scroll-arrow"></div>
         </div>
+        <!-- Image Thing: Added the hero-bg div here -->
+        <div class="hero-bg"></div>
       </section>
 
       <!-- About Section -->
@@ -179,8 +188,16 @@
 
     <!-- Footer -->
     <footer class="footer">
+      <div class="nav-container">
+        <a href="#" class="nav-logo">Portfolio</a>
+        <ul class="nav-links-footer">
+          <li><a>Instagram</a></li>
+          <li><a>LinkedIn</a></li>
+          <li><a>X</a></li>
+        </ul>
+      </div>
       <div class="container">
-        <p>&copy; 2025 Jane Developer. Built with vanilla HTML, CSS & JS.</p>
+        <p class="footer-text"></p> 2025 Jane Developer. Built with vanilla HTML, CSS & JS.</p>
         <a href="#hero" class="back-to-top" aria-label="Back to top">↑</a>
       </div>
     </footer>

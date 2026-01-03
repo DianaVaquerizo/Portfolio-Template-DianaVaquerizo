@@ -28,6 +28,7 @@
     1.75rem + 3.75vw,
     4rem
   ); /* 40px → 64px (hero headline) */
+  --text-6xl: clamp(3.5rem, 2.25rem + 6.25vw, 6rem);
 
   /*
 	 * FLUID SPACING SCALE
@@ -38,15 +39,26 @@
 	 * Use these for margins, paddings, and gaps — NOT for widths!
 	 */
   --space-xs: clamp(0.25rem, 0.2rem + 0.25vw, 0.5rem); /* 4px → 8px */
+
+  --space-xs-md: clamp(0.375rem, 0.3rem + 0.375vw, 0.625rem); /* 6px → 10px */
+
   --space-sm: clamp(0.5rem, 0.4rem + 0.5vw, 0.75rem); /* 8px → 12px */
+
+  --space-sm-md: clamp(0.75rem, 0.6rem + 0.75vw, 1.125rem); /* 12px → 18px */
+
   --space-md: clamp(1rem, 0.8rem + 1vw, 1.5rem); /* 16px → 24px */
+
+  --space-md-lg: clamp(1.25rem, 1rem + 1.25vw, 2rem); /* 20px → 32px */
+
   --space-lg: clamp(1.5rem, 1.2rem + 1.5vw, 2.5rem); /* 24px → 40px */
+
+  --space-lg-xl: clamp(1.75rem, 1.4rem + 1.75vw, 3rem); /* 28px → 48px */
+
   --space-xl: clamp(2rem, 1.5rem + 2.5vw, 4rem); /* 32px → 64px */
-  --space-2xl: clamp(
-    3rem,
-    2rem + 5vw,
-    6rem
-  ); /* 48px → 96px (section padding) */
+
+  --space-xl-2xl: clamp(2.5rem, 2rem + 3vw, 5rem); /* 40px → 80px */
+
+  --space-2xl: clamp(3rem, 2.25rem + 4vw, 6rem); /* 48px → 96px */
 
   /*
 	 * COLOR PALETTE
@@ -75,12 +87,101 @@
   --duration-normal: 0.6s; /* Default animation duration */
 
   /* TYPOGRAPHY TOKENS: font families, weights, and role-based tokens for body, headings and monospace */
-  --font-sans: "PT Sans", system-ui, -apple-system, "Segoe UI", Roboto,
-    "Helvetica Neue", Arial, "Noto Sans", sans-serif;
+  --font-sans: Poppins, Helvetica;
   --font-serif: ui-serif, Georgia, "Times New Roman", Times, "Noto Serif", serif;
   --font-mono: ui-monospace, "Science Gothic", Menlo, Monaco, "Roboto Mono",
     "Courier New", monospace;
 
   --font-weight-body: 400;
-  --font-weight-heading: 100;
+  --font-weight-heading: 600;
+}
+
+.poppins-regular {
+  font-family: "Poppins", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.poppins-medium {
+  font-family: "Poppins", sans-serif;
+  font-weight: 500;
+  font-style: normal;
+}
+
+.poppins-semibold {
+  font-family: "Poppins", sans-serif;
+  font-weight: 600;
+  font-style: normal;
+}
+
+.poppins-bold {
+  font-family: "Poppins", sans-serif;
+  font-weight: 700;
+  font-style: normal;
+}
+
+.poppins-extrabold {
+  font-family: "Poppins", sans-serif;
+  font-weight: 800;
+  font-style: normal;
+}
+
+.poppins-black {
+  font-family: "Poppins", sans-serif;
+  font-weight: 900;
+  font-style: normal;
+}
+
+.poppins-thin-italic {
+  font-family: "Poppins", sans-serif;
+  font-weight: 100;
+  font-style: italic;
+}
+
+.poppins-extralight-italic {
+  font-family: "Poppins", sans-serif;
+  font-weight: 200;
+  font-style: italic;
+}
+
+.poppins-light-italic {
+  font-family: "Poppins", sans-serif;
+  font-weight: 300;
+  font-style: italic;
+}
+
+.poppins-regular-italic {
+  font-family: "Poppins", sans-serif;
+  font-weight: 400;
+  font-style: italic;
+}
+
+.poppins-medium-italic {
+  font-family: "Poppins", sans-serif;
+  font-weight: 500;
+  font-style: italic;
+}
+
+.poppins-semibold-italic {
+  font-family: "Poppins", sans-serif;
+  font-weight: 600;
+  font-style: italic;
+}
+
+.poppins-bold-italic {
+  font-family: "Poppins", sans-serif;
+  font-weight: 700;
+  font-style: italic;
+}
+
+.poppins-extrabold-italic {
+  font-family: "Poppins", sans-serif;
+  font-weight: 800;
+  font-style: italic;
+}
+
+.poppins-black-italic {
+  font-family: "Poppins", sans-serif;
+  font-weight: 900;
+  font-style: italic;
 }
