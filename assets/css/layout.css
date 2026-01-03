@@ -156,7 +156,6 @@
   font-family: var(--font-sans);
   font-size: var(--text-2xl);
   font-weight: var(--font-weight-body);
-  font-size: var(--text-lg);
   color: var(--color-text-muted);
   margin-bottom: var(--space-lg);
 }
@@ -248,58 +247,72 @@
   background: var(--color-bg-alt);
 }
 
+/* 1. Main Container (Text vs Grid) */
 .about-grid {
   display: grid;
   gap: var(--space-xl);
+  grid-template-columns: 1fr; /* Default: Stacked for mobile */
 }
 
-@media (min-width: 768px) {
+@media (min-width: 992px) {
   .about-grid {
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: 1fr 1.5fr; /* Side-by-side for desktop */
     align-items: start;
   }
 }
 
-.about-text p {
-  margin-bottom: var(--space-md);
-  color: var(--color-text-muted);
-  font-family: var(--font-sans);
-  font-weight: var(--font-weight-body);
-  line-height: var(--space-md);
-}
-
+/* 2. Skills Grid (The Cards) */
 .skills-grid {
   display: grid;
+  /* Forces 2 columns even on smaller screens */
   grid-template-columns: repeat(2, 1fr);
   gap: var(--space-md);
 }
 
+/* If the screen is very narrow (mobile), stack the cards to prevent squishing */
+@media (max-width: 400px) {
+  .skills-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* 3. Individual Skill Card Layout */
 .skill-card {
   background: var(--color-bg);
   padding: var(--space-md);
-  border-radius: 12px;
-  text-align: center;
-  font-family: var(--font-sans);
-  font-weight: var(--font-weight-body);
-  line-height: var(--space-md);
+  border-radius: 20px;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  text-align: left;
 }
 
 .skill-icon {
-  font-size: var(--text-2xl);
-  display: block;
-  margin-bottom: var(--space-sm);
+  width: 32px; /* Smaller size to fit 2-column layout better */
+  height: 32px;
+  object-fit: cover;
+  border-radius: 4px;
+  flex-shrink: 0;
+}
+
+.skill-content {
+  flex-grow: 1;
+  min-width: 0; /* Prevents text overflow */
 }
 
 .skill-card h3 {
   font-size: var(--text-sm);
-  margin-bottom: var(--space-sm);
+  margin: 0 0 12px 0;
+  font-family: var(--font-sans);
 }
 
+/* 4. Skill Bar & Animation */
 .skill-bar {
   height: 6px;
   background: var(--color-bg-alt);
   border-radius: 3px;
   overflow: hidden;
+  width: 100%;
 }
 
 .skill-fill {
@@ -310,11 +323,18 @@
   transition: width 1s var(--ease-out) 0.3s;
 }
 
-/* Animate skill bars when revealed */
 [data-reveal-stagger].revealed .skill-fill {
   width: var(--fill);
 }
 
+.about-text p {
+  margin-bottom: var(--space-md);
+  color: var(--color-text-muted);
+  font-family: var(--font-sans);
+  font-size: var(--text-1xl);
+  line-height: var(--space-md);
+  text-align: left;
+}
 /* --------------------------------------------------------------------------
    8. Projects Section
    -------------------------------------------------------------------------- */
@@ -337,7 +357,7 @@
 
 .project-card {
   background: var(--color-bg-alt);
-  border-radius: 16px;
+  border-radius: 20px;
   overflow: hidden;
   transition: transform 0.3s, box-shadow 0.3s;
 }
