@@ -72,6 +72,8 @@
   --color-text-muted: #a0a0a0; /* Subdued text for secondary content */
   --color-accent: #f163d9; /* Indigo — primary brand color */
   --color-accent-hover: #818cf8; /* Lighter indigo for hover states */
+  --color-accent-two:#818cf8;
+  --color-accent-three:
 
   /*
 	 * ANIMATION TOKENS
