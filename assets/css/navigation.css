@@ -7,7 +7,7 @@
   left: 0;
   right: 0;
   z-index: 100;
-  background: rgba(15, 15, 15, 0.9);
+  background: var(--color-accent);
   backdrop-filter: blur(10px);
   padding: var(--space-md) 0;
 }
@@ -71,11 +71,11 @@
 }
 
 .nav-links a {
-  color: var(--color-text-muted);
+  color: var(--color-text);
   transition: color 0.3s;
 }
 
 .nav-links a:hover,
 .nav-links a:focus {
-  color: var(--color-accent);
+  color: var(--color-text-muted);
 }

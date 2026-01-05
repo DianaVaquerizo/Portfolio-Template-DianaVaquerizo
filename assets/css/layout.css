@@ -6,6 +6,18 @@
   margin-inline: auto;
 }
 
+.container-footer {
+  width: min(90%, 1200px);
+  margin-inline: auto;
+  margin-top: var(--space-2xl);
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: center;
+  font-family: var(--font-sans);
+  font-weight: var(--font-weight-body);
+}
+
 .section {
   padding: var(--space-2xl) 0;
 }
@@ -16,6 +28,15 @@
   font-family: var(--font-sans);
   margin-bottom: var(--space-xl);
   text-align: center;
+  color: var(--color-text);
+}
+.section-title2 {
+  font-size: var(--text-3xl);
+  font-weight: var(--font-weight-heading);
+  font-family: var(--font-sans);
+  margin-bottom: var(--space-xl);
+  text-align: center;
+  color: var(--color-bg-alt);
 }
 
 /* --------------------------------------------------------------------------
@@ -29,6 +50,7 @@
   justify-content: center;
   text-align: center;
   overflow: hidden;
+  color: var(--color-text);
 }
 
 .hero-bg {
@@ -40,11 +62,11 @@
   z-index: -1;
 
   /* Use specific properties to ensure 'cover' is not overridden by shorthand */
-  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
-    url("https://images.unsplash.com/photo-1498050108023-c5249f4df085?auto=format&fit=crop&q=80&w=2072");
+  background-image: url("https://images.unsplash.com/photo-1498050108023-c5249f4df085?auto=format&fit=crop&q=80&w=2072");
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
+  background-color: var(--color-bg-alt);
 
   /* Animation logic: start at 0 opacity to ensure the fade is visible */
   opacity: 0;
@@ -148,7 +170,7 @@
   font-family: var(--font-sans);
   font-size: var(--text-6xl);
   font-weight: var(--font-weight-heading);
-  margin-bottom: var(--space-sm);
+  margin-bottom: var(--space-md);
   letter-spacing: -0.02em;
 }
 
@@ -156,7 +178,7 @@
   font-family: var(--font-sans);
   font-size: var(--text-2xl);
   font-weight: var(--font-weight-body);
-  color: var(--color-text-muted);
+  color: var(--color-text);
   margin-bottom: var(--space-lg);
 }
 
@@ -170,7 +192,7 @@
   flex-direction: column;
   align-items: center;
   gap: var(--space-sm);
-  color: var(--color-text-muted);
+  color: var(--color-text);
   font-family: var(--font-sans);
   font-size: var(--text-1xl);
   font-weight: var(--font-weight-body);
@@ -180,7 +202,7 @@
   position: relative;
   width: 40px;
   height: 40px;
-  color: #fff; /* arrow color */
+  color: var(--color-text); /* arrow color */
   display: flex;
   align-items: center;
   justify-content: center;
@@ -192,7 +214,7 @@
   content: "";
   position: absolute;
   inset: 0;
-  background-color: #333; /* circle color */
+  background-color: var(--color-accent); /* circle color */
   border-radius: 50%;
 }
 
@@ -227,7 +249,7 @@
   font-weight: var(--font-weight-body);
   display: inline-block;
   padding: var(--space-sm-md) var(--space-lg);
-  background: var(--color-accent);
+  background: var(--color-accent2);
   color: white;
   font-weight: 600;
   border-radius: 100px;
@@ -236,7 +258,7 @@
 
 .btn:hover,
 .btn:focus {
-  background: var(--color-accent-hover);
+  background: var(--color-accent2-hover);
   transform: translateY(-2px);
 }
 
@@ -278,7 +300,7 @@
 
 /* 3. Individual Skill Card Layout */
 .skill-card {
-  background: var(--color-bg);
+  background: var(--color-accent);
   padding: var(--space-md);
   border-radius: 20px;
   display: flex;
@@ -309,7 +331,7 @@
 /* 4. Skill Bar & Animation */
 .skill-bar {
   height: 6px;
-  background: var(--color-bg-alt);
+  background: var(--color-accent-hover);
   border-radius: 3px;
   overflow: hidden;
   width: 100%;
@@ -318,7 +340,7 @@
 .skill-fill {
   height: 100%;
   width: 0;
-  background: var(--color-accent);
+  background: var(--color-bg);
   border-radius: 3px;
   transition: width 1s var(--ease-out) 0.3s;
 }
@@ -396,7 +418,7 @@
 
 .project-content p {
   font-size: var(--text-sm);
-  color: var(--color-text-muted);
+  color: var(--color-text);
   margin-bottom: var(--space-xs);
   font-family: var(--font-sans);
   font-weight: var(--font-weight-body);
@@ -423,13 +445,24 @@
    9. Contact Section
    -------------------------------------------------------------------------- */
 .contact {
-  background: var(--color-bg-alt);
+  /* Placeholder image: A clean, professional dark office desk */
+  background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)),
+    url("https://images.unsplash.com/photo-1497215728101-856f4ea42174?auto=format&fit=crop&q=80&w=2070");
+
+  /* Positioning and Scaling */
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+
+  /* Layout */
   text-align: center;
+  padding: 100px 0;
+  color: white; /* Ensures text is readable over the image */
 }
 
 .contact-content p {
   font-size: var(--text-lg);
-  color: var(--color-text-muted);
+  color: var(--color-text);
   margin-bottom: var(--space-lg);
 }
 
@@ -441,7 +474,7 @@
 }
 
 .social-links a {
-  color: var(--color-text-muted);
+  color: var(--color-text);
   transition: color 0.3s;
 }
 
@@ -449,6 +482,16 @@
   color: var(--color-accent);
 }
 
+/* This targets all inputs */
+input::placeholder {
+  color: var(--color-text); /* Replace with your hex code or color name */
+  opacity: 1; /* Firefox requires this to show the full color */
+}
+
+.input-field::placeholder {
+  color: var(--color-text); /* Change this to your preferred color */
+  opacity: 1; /* Ensures the color isn't faded in Firefox */
+}
 /* --------------------------------------------------------------------------
    10. Footer
    -------------------------------------------------------------------------- */
@@ -457,27 +500,56 @@
   text-align: center;
   color: var(--color-text-muted);
   font-size: var(--text-sm);
+  background-color: var(--color-bg-alt);
 }
 
 .footer .container {
   display: flex;
-  justify-content: space-between;
-  align-items: center;
+  justify-content: flex-start; /* Aligns items to the left */
+  align-items: center; /* Vertically centers items (optional, but common) */
+}
+
+/* 2. The Text: Stays on the left by default */
+.footer-text {
+  margin: 0;
+  font-family: var(--font-sans);
+  font-weight: var(--font-weight-body);
 }
 
 .back-to-top {
+  /* Layout */
+  /* Layout */
+  margin-left: auto;
   width: 40px;
   height: 40px;
+  background-color: var(--color-accent);
+  border-radius: 50%; /* Using 50% is standard for circles */
   display: flex;
   align-items: center;
   justify-content: center;
-  background: var(--color-bg-alt);
-  border-radius: 50%;
-  transition: background 0.3s, transform 0.3s;
+  position: relative; /* Needed to position the arrow inside */
+  transition: transform 0.3s;
+}
+
+.back-to-top::after {
+  content: "";
+  width: 10px;
+  height: 10px;
+  /* Creates the two lines */
+  border-top: 2px solid var(--color-text);
+  border-left: 2px solid var(--color-text);
+  /* Rotates the two lines to point up */
+  transform: rotate(45deg);
+  /* Optional: slightly nudge the arrow down to visually center it */
+  margin-top: 4px;
 }
 
 .back-to-top:hover {
-  background: var(--color-accent);
+  transform: translateY(-5px);
+}
+
+.back-to-top:hover {
+  background: var(--color-accent-hover);
   transform: translateY(-3px);
 }
 
@@ -680,8 +752,8 @@
    -------------------------------------------------------------------------- */
 .contact-container {
   width: 100%;
-  max-width: 900px;
-  padding: 40px;
+  max-width: 2000px;
+  margin-bottom: var(--space-lg);
   border-radius: 20px;
 }
 
@@ -708,15 +780,19 @@
   width: 100%;
   padding: 12px 16px;
   border-radius: 20px;
-  font-size: 1rem;
+  font-family: var(--font-sans);
+  font-weight: var(--font-weight-body);
+  line-height: var(--space-md);
+  color: var(--color-bg);
   box-sizing: border-box;
   transition: border-color 0.2s, box-shadow 0.2s;
+  border-width: 0px;
+  background-color: var(--color-bg-alt2);
 }
 
 .input-field:focus {
   outline: none;
   border-color: var(--primary-color);
-  box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.1);
 }
 
 textarea.input-field {
@@ -733,7 +809,6 @@ textarea.input-field {
 
   .contact-container {
     padding: 24px;
-    margin: 20px;
   }
 
   textarea.input-field {
