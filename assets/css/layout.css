@@ -464,11 +464,11 @@
    -------------------------------------------------------------------------- */
 .contact {
   /* Placeholder image: A clean, professional dark office desk */
-  background-image: url("https://ik.imagekit.io/DianaVaquerizoImg/Artboard%201.png");
+  background-image: url("https://ik.imagekit.io/DianaVaquerizoImg/Asset%204.png?updatedAt=1767626300143");
 
   /* Positioning and Scaling */
   background-size: cover;
-  background-position: center;
+  background-position: top;
   background-repeat: no-repeat;
 
   /* Layout */
@@ -571,57 +571,69 @@ input::placeholder {
 }
 
 /* --------------------------------------------------------------------------
-   11. SCROLL REVEAL ANIMATIONS (IntersectionObserver-driven)
+   11. ACCESSIBILITY: REDUCED MOTION
 
-   🎓 THE CSS + JAVASCRIPT PARTNERSHIP:
-   The JavaScript IntersectionObserver (in main.js) adds classes when elements
-   enter the viewport. CSS handles the actual animation via transitions.
+   🎓 WHY THIS MATTERS:
+   Some users experience motion sickness, vestibular disorders, or seizures
+   triggered by animations. Others simply find motion distracting.
 
-   This separation of concerns is powerful:
-   - JS: "When should the animation start?" (viewport detection)
-   - CSS: "How should the animation look?" (visual effects)
+   The ⁠ prefers-reduced-motion ⁠ media query respects user preferences set in
+   their operating system settings:
+   - macOS: System Preferences → Accessibility → Display → Reduce motion
+   - Windows: Settings → Ease of Access → Display → Show animations
+   - iOS: Settings → Accessibility → Motion → Reduce Motion
 
-   📐 THE PATTERN:
-   1. Elements start with opacity: 0 and transform: translateY(30px)
-   2. JavaScript adds .visible class when element enters viewport
-   3. CSS transitions smoothly animate to opacity: 1 and translateY(0)
+   ⚖️ LEGAL REQUIREMENT:
+   WCAG 2.1 Success Criterion 2.3.3 requires respecting user motion preferences.
+   Ignoring this can expose you to accessibility lawsuits.
 
-   ⚡ PERFORMANCE NOTE:
-   We ONLY animate `transform` and `opacity` because these properties:
-   - Don't trigger layout recalculation (expensive!)
-   - Don't trigger repaint (also expensive!)
-   - Run on the GPU compositor thread (fast! 60fps!)
+   📐 OUR APPROACH:
+   When reduced motion is preferred, we:
+   1. Disable ALL animations and transitions (near-instant 0.01ms)
+   2. Make animated elements immediately visible (no waiting)
+   3. Disable smooth scrolling (instant jumps instead)
 
-   NEVER animate: width, height, margin, padding, top, left, etc.
-   These trigger layout and will cause jank (stuttering).
+   💡 WHY 0.01ms INSTEAD OF 0ms?
+   Some browsers have bugs with 0ms duration. 0.01ms is effectively instant
+   but avoids those edge cases.
+
+   🔗 LEARN MORE: https://web.dev/prefers-reduced-motion/
    -------------------------------------------------------------------------- */
-
-/*
- * SINGLE ELEMENT REVEAL
- *
- * Use class="animate-on-scroll" on any element you want to fade in.
- * JavaScript will add .visible when it scrolls into view.
- */
-.animate-on-scroll {
-  opacity: 0; /* Start invisible */
-  transform: translateY(30px); /* Start 30px below final position */
+@media (prefers-reduced-motion: reduce) {
+  /*
+	 * NUCLEAR OPTION: Disable ALL animations/transitions globally
+	 *
+	 * The !important ensures this overrides any other animation styles.
+	 * This is one of the few legitimate uses of !important.
+	 */
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important; /* Instant scroll, no smooth */
+  }
 
   /*
-	 * TRANSITION SHORTHAND EXPANDED:
+	 * ENSURE ANIMATED CONTENT IS VISIBLE
 	 *
-	 * transition: [property] [duration] [timing-function]
-	 *
-	 * We're transitioning TWO properties (opacity AND transform).
-	 * Both use var(--duration-normal) = 0.6s
-	 * Both use var(--ease-out) = our custom easing curve
+	 * Without this, elements with opacity: 0 would stay invisible forever
+	 * since the animation that reveals them is now disabled.
 	 */
-  transition: opacity var(--duration-normal) var(--ease-out),
-    transform var(--duration-normal) var(--ease-out);
-}
+  .animate-on-scroll,
+  [data-reveal-stagger] > * {
+    opacity: 1; /* Fully visible */
+    transform: none; /* No transform offset */
+  }
 
-.animate-on-scroll.visible {
-  opacity: 1; /* Fade in */
-  transform: translateY(0); /* Move to final position */
+  /*
+	 * SKILL BARS: Show at full width immediately
+	 */
+  .skill-fill {
+    width: var(--fill);
+    transition: none;
+  }
 }
 
 /* --------------------------------------------------------------------------
