@@ -669,7 +669,7 @@ input::placeholder {
 }
 
 /* --------------------------------------------------------------------------
-   13. Mobile Adjustments
+   13. Mobile Adjustments and hamburger
    -------------------------------------------------------------------------- */
 @media (max-width: 640px) {
   .nav-links {
@@ -748,4 +748,98 @@ textarea.input-field {
   textarea.input-field {
     min-height: 150px;
   }
+}
+
+/* 404*/
+/* 404*/
+/* 404*/
+/* 404*/
+
+/* --------------------------------------------------------------------------
+   5. Hero Section
+   -------------------------------------------------------------------------- */
+.hero404 {
+  position: relative;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  overflow: hidden;
+  color: var(--color-bg);
+}
+
+.hero-bg404 {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+
+  /* Use specific properties to ensure 'cover' is not overridden by shorthand */
+  background-image: url("https://ik.imagekit.io/DianaVaquerizoImg/Artboard%201%20copy.png");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-color: var(--color-bg-alt);
+}
+
+@media (max-width: 800px) {
+  .hero-bg404 {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+
+    /* Use specific properties to ensure 'cover' is not overridden by shorthand */
+    background-image: url("https://ik.imagekit.io/DianaVaquerizoImg/Artboard%201.png?updatedAt=1767629315752");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-color: var(--color-bg-alt);
+
+    /* Animation logic: start at 0 opacity to ensure the fade is visible */
+  }
+}
+
+@media (max-width: 500px) {
+  .hero-bg404 {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+
+    /* Use specific properties to ensure 'cover' is not overridden by shorthand */
+    background-image: url("https://ik.imagekit.io/DianaVaquerizoImg/Artboard%201.png?updatedAt=1767629315752");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-color: var(--color-bg-alt);
+
+    /* Animation logic: start at 0 opacity to ensure the fade is visible */
+  }
+}
+.hero-content404 {
+  z-index: 1;
+}
+
+.hero-title404 {
+  font-family: var(--font-sans);
+  font-size: var(--text-6xl);
+  font-weight: var(--font-weight-heading);
+  margin-bottom: var(--space-md);
+  letter-spacing: -0.02em;
+}
+
+.hero-subtitle404 {
+  font-family: var(--font-sans);
+  font-size: var(--text-lg);
+  font-weight: var(--font-weight-body);
+  color: var(--color-text-muted);
+  margin-bottom: var(--space-lg);
 }

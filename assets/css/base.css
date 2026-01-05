@@ -52,6 +52,10 @@ body {
   line-height: 1.6;
   color: var(--color-text);
   background-color: var(--color-bg);
+  /* FOR HAMBURGER*/
+  width: 100%;
+  overflow-x: hidden;
+  position: relative;
 }
 
 /*
