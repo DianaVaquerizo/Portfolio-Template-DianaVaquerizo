@@ -316,7 +316,7 @@ function initActiveNav() {
         navLinks.forEach((link) => {
           link.style.color =
             link.getAttribute("href") === `#${id}`
-              ? "var(--color-text-muted)" // Highlighted color
+              ? "var(--color-accent)" // Highlighted color
               : ""; // Reset to default (inherits from CSS)
         });
       }
@@ -374,3 +374,42 @@ window.cleanupScrollObservers = () => {
   staggerObserver.disconnect();
   console.log("🧹 Observers cleaned up");
 };
+
+/**
+ * Mobile Navigation Toggle Script
+ * This script handles the opening and closing of the hamburger menu.
+ */
+
+// We wrap everything in an event listener to ensure the HTML is loaded first
+document.addEventListener("DOMContentLoaded", () => {
+  // 1. Select the elements by their IDs
+  const hamburger = document.getElementById("hamburger-menu");
+  const navMenu = document.getElementById("nav-links");
+
+  // 2. Security Check: Only run the code if the elements actually exist on the page
+  if (hamburger && navMenu) {
+    // 3. Listen for the click event
+    hamburger.addEventListener("click", () => {
+      // Toggle the 'active' class on the menu
+      navMenu.classList.toggle("active");
+
+      // Optional: Toggle an 'open' class on the button for styling (like turning ☰ into X)
+      hamburger.classList.toggle("open");
+
+      console.log("Menu toggled! Current classes:", navMenu.className);
+    });
+
+    // 4. Optional: Close the menu when a link is clicked (useful for one-page sites)
+    const navLinks = navMenu.querySelectorAll("a");
+    navLinks.forEach((link) => {
+      link.addEventListener("click", () => {
+        navMenu.classList.remove("active");
+      });
+    });
+  } else {
+    // This will show up in the F12 console if your HTML IDs don't match
+    console.error(
+      "Navigation Error: Check that your IDs match 'hamburger-menu' and 'nav-links'."
+    );
+  }
+});
