@@ -2,15 +2,16 @@
 
 ## Trends
 
-- [Trend 1]
-- [Trend 2]
-- [Trend 3]
+- Fluid typography (type scales)
+- Scrollytelling
+- Milimalism and maximalism (Clean layout with certain illustrations)
+- Animation
 
 ## Visual References
 
-- [Link or moodboard image 1]
-- [Link or moodboard image 2]
-- [Link or moodboard image 3]
+- https://www.awwwards.com/sites/dont-board-me
+- https://small-business-marketing.vistaprint.com/
+- https://www.purposetalent.xyz/
 
 ## Theme Draft
 

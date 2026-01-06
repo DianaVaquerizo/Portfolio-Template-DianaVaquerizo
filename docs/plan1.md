@@ -45,9 +45,5 @@ border-radius: 50%;
 
 ## Implementation Notes
 
-_Brief notes on what was implemented from the plan._
-
-- What was implemented
-- What was skipped or changed
-- Any deviations and why
-- Remaining follow-ups
+- What was implemented: The CSS for the cirular scrolling indicator.
+- What was skipped or changed: I modified the styling.

@@ -106,5 +106,5 @@ a {
 }
 
 .skip-link:focus {
-  top: 0; /* Slides into view when focused via keyboard */
+  top: 0;
 }

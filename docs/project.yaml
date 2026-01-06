@@ -2,14 +2,14 @@
 # This file will be used to generate your entry in the course showroom
 
 # Basic information
-handle: your-github-username
-name: Your Full Name
-email: your-email@udit.es
+handle: DianaVaquerizo
+name: Diana Vaquerizo Calero
+email: Dianavaquerizo@udit.es
 
 # URLs (will be auto-generated if you follow naming conventions)
-github_url: https://github.com/your-username
-project_url: https://your-username.github.io/your-project-repo
-repository_url: https://github.com/your-username/your-project-repo
+github_url: https://github.com/DianaVaquerizo
+project_url: https://dianavaquerizo.github.io/Portfolio-Template-DianaVaquerizo/
+repository_url: https://github.com/DianaVaquerizo/Portfolio-Template-DianaVaquerizo
 
 # Project details
 title:
@@ -30,6 +30,7 @@ tags:
   - css3
   - responsive-design
   - accessibility
+  - animations
   # Add more as relevant: javascript, sass, performance, etc.
 
 # Learning objectives you're focusing on
@@ -37,14 +38,20 @@ learning_focus:
   - semantic-html
   - mobile-first-design
   - web-accessibility
-  # Add more as you progress
+  - animations
+  - typography hierarchy
+  - color contrast
 
-# Week tracking (update as you go)
-milestones:
-  week_1_setup: false
-  week_2_brief: false
-  week_4_metadata: false
-  week_5_showcase: false
+# Day tracking (update as you go)
+Day milestones:
+  Day_1_setup: Organize documents
+  Day_2_brief: Organize documents
+  Day_3_design: Layout
+  Day_4_design: Layout and typography
+  Day_5_design: Layout
+  Day_6_design: Layout and animations
+  Day_7_design: Layout, color, and images
+  Day_8_design: Images and final adjustments
 
 # Optional: link to your project brief
 brief_url: project-brief.md

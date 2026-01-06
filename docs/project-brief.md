@@ -1,9 +1,9 @@
 # Project Brief
 
-**Student:** [Your Name]  
-**Handle:** @[your-github-username]  
+**Student:** Diana Vaquerizo
+**Handle:** @[DianaVaquerizo]  
 **Course:** Web Design 2025 · Fall  
-**Date:** [Fill in date - Week 2]
+**Date:** [6/1/2026]
 
 ---
 
@@ -79,15 +79,28 @@
 
 ### Color Palette
 
-<!-- List your main colors -->
+--color-bg: #FFF5E1;
+--color-bg-alt: #454f2E;
+--color-bg-alt2: #657441;
+--color-text: #FFF5E1;
+--color-text-muted: #faecd2;
+--color-accent: #b592d1;
+--color-accent-hover: #a679ca;
+--color-accent2: #e9b23a;
+--color-accent2-hover: #ffd374;
 
 ### Typography
 
-<!-- What fonts/typeface approach will you use? -->
+--font-sans: Poppins, Helvetica;
+
+--font-weight-body: 400;
+--font-weight-heading: 600;
 
 ### Inspiration/References
 
-<!-- List 2-3 websites or designs that inspire your approach -->
+https://www.purposetalent.xyz/
+https://dontboardme.com/
+https://small-business-marketing.vistaprint.com/
 
 ---
 
