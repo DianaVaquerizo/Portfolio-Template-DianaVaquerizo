@@ -11,15 +11,15 @@
 
 ### What are you building?
 
-<!-- Describe your project in 2-3 sentences -->
+I am building a web portfolio template that showcases the skills and created projects of a designer, additionally to the visual style of the designer through the use of color, typography and illustrations.
 
 ### Who is it for?
 
-<!-- Define your target audience -->
+The template has been designed keeping in mind than the clients are possible clients for a design studio or freelancer.
 
 ### Why does it matter?
 
-<!-- Explain the purpose and value of your project -->
+This project matters because it has heltped me learn how to create a porfolio website, something that can help me in the future.
 
 ---
 
@@ -29,8 +29,9 @@
 
 - [ ] HTML5 (semantic markup)
 - [ ] CSS3 (responsive design)
-- [ ] JavaScript (if applicable)
-- [ ] Other: \***\*\_\_\_\*\***
+- [ ] JavaScript (animations)
+- [ ] Illustrator (illustrations)
+- [ ] Procreate (illustrations)
 
 ### Accessibility Goals
 
@@ -48,6 +49,7 @@
 - [ ] Scalable typography
 - [ ] Optimized images
 - [ ] Touch-friendly interactions
+- [ ] Mobile bottom menu
 
 ---
 
@@ -55,19 +57,17 @@
 
 ### Key Sections/Pages
 
-1.
-2.
-3.
+1. Index (Hero, about, projects, contact, footer)
+2. 404
 
 ### Content Sources
 
-<!-- Where will your content come from? -->
+All illustrations and photographs have been created by Diana Vaquerizo
+Skill app icons were retrieved from Wikimedia Commons
 
 ### Multilingual Considerations
 
-- Primary language:
-- Secondary language (optional):
-- Translation strategy:
+- Primary language: English
 
 ---
 
@@ -75,7 +75,7 @@
 
 ### Visual Style
 
-<!-- Describe your aesthetic approach -->
+The visual style can ce describes as milimalist yet detailed and inteactive. The layout of elements has an accesible and simple stucture. Nevertheless the use of illustrations and animations give personality to the website.
 
 ### Color Palette
 
@@ -127,10 +127,14 @@ https://small-business-marketing.vistaprint.com/
 
 ### What excites you most about this project?
 
+The idea of creating a full functional porfolio website that containts animations and interactive elements intrests me.
+
 ### What challenges do you anticipate?
+
+Taking in account the experience I had with previous web design projects I anticipate having several issues with the css layout elemnts, specifically creating whole new components.
 
 ### How does this project connect to your learning goals?
 
----
+This project helps me gain knowledge in the creation of a web portfolio, that I can then use to create muy own portfolio website.
 
-_This brief will evolve as your project develops. Update it as needed and reference it in your weekly commits._
+---

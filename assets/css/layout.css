@@ -84,8 +84,6 @@
     background-repeat: no-repeat;
     background-size: cover;
     background-color: var(--color-bg-alt);
-
-    /* Animation logic: start at 0 opacity to ensure the fade is visible */
   }
 }
 
@@ -104,8 +102,6 @@
     background-repeat: no-repeat;
     background-size: cover;
     background-color: var(--color-bg-alt);
-
-    /* Animation logic: start at 0 opacity to ensure the fade is visible */
   }
 }
 
@@ -228,7 +224,7 @@
   position: relative;
   width: 40px;
   height: 40px;
-  color: var(--color-text); /* arrow color */
+  color: var(--color-text);
   display: flex;
   align-items: center;
   justify-content: center;
@@ -240,7 +236,7 @@
   content: "";
   position: absolute;
   inset: 0;
-  background-color: var(--color-accent); /* circle color */
+  background-color: var(--color-accent);
   border-radius: 50%;
 }
 
@@ -318,12 +314,12 @@
 .about-grid {
   display: grid;
   gap: var(--space-xl);
-  grid-template-columns: 1fr; /* Default: Stacked for mobile */
+  grid-template-columns: 1fr;
 }
 
 @media (min-width: 992px) {
   .about-grid {
-    grid-template-columns: 1fr 1.5fr; /* Side-by-side for desktop */
+    grid-template-columns: 1fr 1.5fr;
     align-items: start;
   }
 }
@@ -331,19 +327,16 @@
 /* 2. Skills Grid (The Cards) */
 .skills-grid {
   display: grid;
-  /* Forces 2 columns even on smaller screens */
   grid-template-columns: repeat(2, 1fr);
   gap: var(--space-md);
 }
 
-/* If the screen is very narrow (mobile), stack the cards to prevent squishing */
 @media (max-width: 400px) {
   .skills-grid {
     grid-template-columns: 1fr;
   }
 }
 
-/* 3. Individual Skill Card Layout */
 .skill-card {
   background: var(--color-bg-alt2);
   padding: var(--space-md);
@@ -355,7 +348,7 @@
 }
 
 .skill-icon {
-  width: 32px; /* Smaller size to fit 2-column layout better */
+  width: 32px;
   height: 32px;
   object-fit: cover;
   border-radius: 4px;
@@ -364,7 +357,7 @@
 
 .skill-content {
   flex-grow: 1;
-  min-width: 0; /* Prevents text overflow */
+  min-width: 0;
 }
 
 .skill-card h3 {
@@ -527,13 +520,13 @@
 
 /* This targets all inputs */
 input::placeholder {
-  color: var(--color-text); /* Replace with your hex code or color name */
-  opacity: 1; /* Firefox requires this to show the full color */
+  color: var(--color-text);
+  opacity: 1;
 }
 
 .input-field::placeholder {
-  color: var(--color-text); /* Change this to your preferred color */
-  opacity: 1; /* Ensures the color isn't faded in Firefox */
+  color: var(--color-text);
+  opacity: 1;
 }
 /* --------------------------------------------------------------------------
    10. Footer
@@ -548,11 +541,10 @@ input::placeholder {
 
 .footer .container {
   display: flex;
-  justify-content: flex-start; /* Aligns items to the left */
-  align-items: center; /* Vertically centers items (optional, but common) */
+  justify-content: flex-start;
+  align-items: center;
 }
 
-/* 2. The Text: Stays on the left by default */
 .footer-text {
   margin: 0;
   font-family: var(--font-sans);
@@ -560,17 +552,15 @@ input::placeholder {
 }
 
 .back-to-top {
-  /* Layout */
-  /* Layout */
   margin-left: auto;
   width: 40px;
   height: 40px;
   background-color: var(--color-accent);
-  border-radius: 50%; /* Using 50% is standard for circles */
+  border-radius: 50%;
   display: flex;
   align-items: center;
   justify-content: center;
-  position: relative; /* Needed to position the arrow inside */
+  position: relative;
   transition: transform 0.3s;
 }
 
@@ -578,12 +568,9 @@ input::placeholder {
   content: "";
   width: 10px;
   height: 10px;
-  /* Creates the two lines */
   border-top: 2px solid var(--color-text);
   border-left: 2px solid var(--color-text);
-  /* Rotates the two lines to point up */
   transform: rotate(45deg);
-  /* Optional: slightly nudge the arrow down to visually center it */
   margin-top: 4px;
 }
 
@@ -604,7 +591,6 @@ input::placeholder {
 .animate-on-scroll {
   opacity: 0;
   transform: translateY(30px);
-  /* Using hard-coded 0.6s and a smooth ease-out curve */
   transition: opacity 0.6s cubic-bezier(0.16, 1, 0.3, 1),
     transform 0.6s cubic-bezier(0.16, 1, 0.3, 1);
 }
@@ -618,7 +604,6 @@ input::placeholder {
 [data-reveal-stagger] > * {
   opacity: 0;
   transform: translateY(20px);
-  /* Hard-coded 0.5s for children */
   transition: opacity 0.5s cubic-bezier(0.16, 1, 0.3, 1),
     transform 0.5s cubic-bezier(0.16, 1, 0.3, 1);
 }
@@ -673,7 +658,7 @@ input::placeholder {
    -------------------------------------------------------------------------- */
 @media (max-width: 640px) {
   .nav-links {
-    display: none; /* Would be hamburger menu in production */
+    display: none;
   }
 
   .footer .container {
@@ -731,11 +716,10 @@ input::placeholder {
 
 textarea.input-field {
   height: 100%;
-  min-height: 200px; /* Slightly taller to match the 4 inputs */
+  min-height: 200px;
   resize: none;
 }
 
-/* Responsive Design */
 @media (max-width: 768px) {
   .contact-form {
     grid-template-columns: 1fr;
@@ -777,7 +761,6 @@ textarea.input-field {
   height: 100%;
   z-index: -1;
 
-  /* Use specific properties to ensure 'cover' is not overridden by shorthand */
   background-image: url("https://ik.imagekit.io/DianaVaquerizoImg/IMG_1456.PNG?updatedAt=1767691255144");
   background-position: center;
   background-repeat: no-repeat;
@@ -794,14 +777,11 @@ textarea.input-field {
     height: 100%;
     z-index: -1;
 
-    /* Use specific properties to ensure 'cover' is not overridden by shorthand */
     background-image: url("https://ik.imagekit.io/DianaVaquerizoImg/IMG_1455.PNG?updatedAt=1767691254854");
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
     background-color: var(--color-bg-alt);
-
-    /* Animation logic: start at 0 opacity to ensure the fade is visible */
   }
 }
 
@@ -813,15 +793,11 @@ textarea.input-field {
     width: 100%;
     height: 100%;
     z-index: -1;
-
-    /* Use specific properties to ensure 'cover' is not overridden by shorthand */
     background-image: url("https://ik.imagekit.io/DianaVaquerizoImg/IMG_1454.PNG?updatedAt=1767691254792");
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
     background-color: var(--color-bg-alt);
-
-    /* Animation logic: start at 0 opacity to ensure the fade is visible */
   }
 }
 .hero-content404 {

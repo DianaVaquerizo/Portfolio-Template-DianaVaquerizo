@@ -57,7 +57,6 @@
   list-style: none;
 }
 
-/* Hover*/
 .nav-links-footer a {
   text-decoration: none;
   color: inherit;
@@ -85,21 +84,18 @@
    Mobile Navigation (Floating Bottom Menu)
    -------------------------------------------------------------------------- */
 @media (max-width: 768px) {
-  /* 1. FIX: Disable the filter on the parent so the child can move freely */
   .nav {
     backdrop-filter: none;
     -webkit-backdrop-filter: none;
-    transform: none; /* Just in case */
+    transform: none;
   }
 
-  /* 2. Style the floating menu */
   .nav-links {
     position: fixed;
-    /* Use 'unset' to ensure top settings don't interfere */
     top: auto;
     bottom: 20px;
     left: 50%;
-    transform: translateX(-50%); /* Start centered */
+    transform: translateX(-50%);
 
     /* Styling */
     width: min(90%, 400px);
@@ -108,9 +104,8 @@
     align-items: center;
     padding: 1rem 2rem;
     margin: 0;
-    z-index: 999; /* Super high z-index */
+    z-index: 999;
 
-    /* Floating Bar Appearance */
     background: var(--color-accent-hover);
     backdrop-filter: blur(10px);
     -webkit-backdrop-filter: blur(10px);
@@ -127,7 +122,6 @@
   }
 }
 
-/* Ensure the animation handles the centering correctly */
 @keyframes slideUpFade {
   0% {
     transform: translate(-50%, 150%);
